@@ -1,4 +1,4 @@
-import Event from '../event';
+import Event from './event';
 
 class TicTacToe {
     board:string[]
@@ -7,6 +7,7 @@ class TicTacToe {
     updateCellEvent:Event
     victoryEvent: Event
     drawEvent:Event
+    restartEvent:Event
 
     constructor() {
         this.board = Array(9).fill(0);
@@ -16,6 +17,7 @@ class TicTacToe {
         this.updateCellEvent = new Event();
         this.victoryEvent = new Event();
         this.drawEvent = new Event();
+        this.restartEvent = new Event();
     }
 
     play(move: number) {
@@ -27,7 +29,6 @@ class TicTacToe {
         this.finished = this.victory() || this.draw();
 
         if (!this.finished) { this.switchPlayer(); }
-
         return true;
     }
 
@@ -45,7 +46,8 @@ class TicTacToe {
 
         const victory = lines.some(l => this.board[l[0]]
         && this.board[l[0]] === this.board[l[1]]
-        && this.board[l[1]] === this.board[l[2]]);
+        && this.board[l[1]] === this.board[l[2]]
+        );
 
         if (victory) {
             this.victoryEvent.trigger(this.currentPlayer);
@@ -66,6 +68,10 @@ class TicTacToe {
 
     switchPlayer() {
         this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
+    }
+
+    restart(){
+        this.board = Array(9).fill(0);
     }
 }
 

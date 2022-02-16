@@ -33,13 +33,11 @@ body {
 }
 
 .x-move {
-    // background: teal;
     background:rgb(20, 107, 220);
     color:white
 }
 
 .o-move {
-    // background:crimson;
     background: white;
     color:rgb(20, 107, 220);
     
@@ -51,4 +49,19 @@ body {
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+.restartButton {
+    position: absolute;
+    top:1rem;right:1rem;
+    background:rgb(20, 107, 220);
+    color:white;
+    font-weight: 100;
+    font-size: 1.5rem;
+    padding: .75rem .5rem;
+    border-radius: 4px;
+
+    &:active {
+        border:white 2px solid;
+    }
 }

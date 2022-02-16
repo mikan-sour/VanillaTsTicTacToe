@@ -1,4 +1,4 @@
-import { Listener, ListenerParams } from "../types";
+import { Listener, ListenerParams } from "./types";
 
 class Event {
     listeners:Listener[]

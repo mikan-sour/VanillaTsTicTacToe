@@ -12,4 +12,5 @@ to Eleazar Meza, who wrote [this wonderful blog post](https://hackernoon.com/wri
 
 - [ ] Tests
 - [ ] Tighten up some of the typings (add a generic for Listeners method in Event class)
-- [ ] Get fancier with the SCSS
+- [X] Get fancier with the SCSS
+- [X] Add restart 
