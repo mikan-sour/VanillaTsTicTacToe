@@ -68,12 +68,12 @@ class View {
     }
 
     restart(){
-        // this.board.remove();
-        // go through cells and remove innerHTML and class
         this.cells?.forEach(cell => {
             cell.classList.remove('o-move');
             cell.classList.remove('x-move');
             cell.innerHTML = '';
+            if(!this.message) return
+            this.message.innerHTML = ''
         })
     }
 }

@@ -72,6 +72,7 @@ class TicTacToe {
 
     restart(){
         this.board = Array(9).fill(0);
+        this.finished = false;
     }
 }
 
