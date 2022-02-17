@@ -25,7 +25,7 @@ class View {
             cell.className = 'cell';
 
             cell.addEventListener('click', () => {
-                this.playEvent.trigger(i);
+                this.playEvent.trigger<number>(i);
             });
 
             this.board.appendChild(cell);

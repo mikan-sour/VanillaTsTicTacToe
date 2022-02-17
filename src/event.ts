@@ -9,8 +9,8 @@ class Event {
     addListener(listener:Listener) {
       this.listeners.push(listener);
     }
-  
-    trigger(params?:ListenerParams) {
+
+    trigger<T>(params?:T) {
       this.listeners.forEach((listener) => listener(params as never));
     }
   }

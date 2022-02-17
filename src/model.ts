@@ -1,4 +1,5 @@
 import Event from './event';
+import { Move } from './types';
 
 class TicTacToe {
     board:string[]
@@ -24,7 +25,7 @@ class TicTacToe {
         if (this.finished || move < 0 || move > 8 || this.board[move]) { return false; }
 
         this.board[move] = this.currentPlayer;
-        this.updateCellEvent.trigger({ move, player: this.currentPlayer });
+        this.updateCellEvent.trigger<Move>({ move, player: this.currentPlayer });
 
         this.finished = this.victory() || this.draw();
 
@@ -50,7 +51,7 @@ class TicTacToe {
         );
 
         if (victory) {
-            this.victoryEvent.trigger(this.currentPlayer);
+            this.victoryEvent.trigger<string>(this.currentPlayer);
         }
 
         return victory;
@@ -60,7 +61,7 @@ class TicTacToe {
         const draw = this.board.every(i => i);
 
         if (draw) {
-            this.drawEvent.trigger();
+            this.drawEvent.trigger<void>();
         }
 
         return draw;

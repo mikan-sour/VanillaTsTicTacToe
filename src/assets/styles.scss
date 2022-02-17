@@ -21,7 +21,7 @@ body {
     width: 300px;
     grid-template-rows: 100px 100px 100px;
     grid-template-columns: 100px 100px 100px;
-    border: 5px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     color: $secondary;
     background-color: $secondary;
@@ -66,7 +66,7 @@ body {
     background-clip: padding-box;
     background-color: $primary;
     border: 1px solid transparent;
-    border-radius: .25rem;
+    border-radius: .5px;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
     color: $secondary;
