@@ -57,7 +57,7 @@ class View {
         
     }
 
-    victory(winner: any) {
+    victory(winner: string|number) {
         if(!this.message) return;
         this.message.innerHTML = `${winner} wins!`;
     }
