@@ -10,7 +10,7 @@ to Eleazar Meza, who wrote [this wonderful blog post](https://hackernoon.com/wri
   
 ## To Do
 
-- [ ] Tests
-- [ ] Tighten up some of the typings (add a generic for Listeners method in Event class)
+- [X] Tests
+- [X] Tighten up some of the typings (add a generic for Listeners method in Event class)
 - [X] Get fancier with the SCSS
 - [X] Add restart 
